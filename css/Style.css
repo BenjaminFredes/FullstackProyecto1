@@ -1,0 +1,345 @@
+:root {
+  --primary-blue: #0d6efd;
+  --shadow-light: rgba(0,0,0,0.15);
+  --shadow-hover: rgba(0,0,0,0.3);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/*bordes y sobra*/
+.custom-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  display: block;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease;
+}
+
+.custom-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px var(--shadow-hover);
+}
+
+/*escudos*/
+.team-logo, .team-logo-match {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/*partidos*/
+.match-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+}
+
+.match-card:hover {
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+}
+
+/*texto vs*/
+.vs-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin: 0 10px;
+}
+
+/*texto hora y estadio*/
+.match-time, .match-stadium {
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+/*login y registro */
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+  max-width: 500px;
+  margin: 3rem auto 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 12px 30px rgba(13, 110, 253, 0.3);
+}
+
+/*mensaje de error y exito*/
+#mensajeLogin, #mensajeRegistro, #mensajeConfirmacion {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/*perfil*/
+.card-profile {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+  text-align: center;
+}
+
+.card-profile .custom-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+#btnCerrarSesion {
+  margin-top: 1.5rem;
+}
+
+/*tablas*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+thead {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #e9f5ff;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th.text-start, td.text-start {
+  text-align: left;
+}
+
+.team-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/*encabezados*/
+h1, h2 {
+  color: var(--primary-blue);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/*footer*/
+footer {
+  background-color: #212529;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/*noticias */
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+/*tarjeta */
+.news-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  width: 320px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  outline-offset: 4px;
+}
+
+.news-card:hover,
+.news-card:focus-visible {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+
+.news-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--primary-blue);
+}
+
+
+.news-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 1rem 1rem 0.5rem;
+  color: #222;
+  flex-grow: 1;
+}
+
+
+.news-date {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 1rem 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 2rem 2.5rem;
+  position: relative;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.25);
+  animation: fadeInModal 0.3s ease forwards;
+}
+
+.modal-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  border: 3px solid var(--primary-blue);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  white-space: pre-line;
+}
+
+/* Contenedor de jugadores */
+.players-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+/* Tarjeta individual de jugador */
+.player-card {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+  padding: 2rem;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+/* Foto del jugador */
+.player-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  border: 3px solid var(--primary-blue);
+}
+
+/* Nombre y posición */
+.player-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: var(--primary-blue);
+}
+
+.player-position {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/*responsive*/
+@media (max-width: 600px) {
+  .team-logo, .team-logo-match {
+    width: 30px;
+    height: 30px;
+  }
+  .vs-text {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+  form {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+}
