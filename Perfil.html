@@ -52,7 +52,7 @@
   <script>
     const datosUsuarioStr = sessionStorage.getItem('usuario');
     if (!datosUsuarioStr) {
-      // No hay usuario logueado, redirigir a login
+      // no hay usuario logueado redirigir a login
       window.location.href = 'Pagina.html';
     } else {
       const datosUsuario = JSON.parse(datosUsuarioStr);
