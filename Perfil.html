@@ -43,7 +43,7 @@
       <a href="https://www.instagram.com/chileanpremierleague" target="_blank" aria-label="Instagram" class="text-white fs-4 me-3"><i class="bi bi-instagram"></i></a>
       <a href="https://www.facebook.com/chileanpremierleague" target="_blank" aria-label="Facebook" class="text-white fs-4 me-3"><i class="bi bi-facebook"></i></a>
       <a href="https://twitter.com/chileanpremier" target="_blank" aria-label="X (Twitter)" class="text-white fs-4 me-3"><i class="bi bi-x-circle"></i></a>
-      <a href="mailto:contacto@chileanpremierleague.cl" aria-label="Correo electrónico" class="text-white fs-4"><i class="bi bi-envelope-fill"></i></a>
+      <a href="mailto:contacto@chileanpremierleague.cl" aria-label="Correo electronico" class="text-white fs-4"><i class="bi bi-envelope-fill"></i></a>
     </div>
     <p>&copy; 2025 Chilean Premier League</p>
   </footer>
@@ -52,7 +52,6 @@
   <script>
     const datosUsuarioStr = sessionStorage.getItem('usuario');
     if (!datosUsuarioStr) {
-      // no hay usuario logueado redirigir a login
       window.location.href = 'Pagina.html';
     } else {
       const datosUsuario = JSON.parse(datosUsuarioStr);
